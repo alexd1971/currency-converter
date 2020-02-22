@@ -1,0 +1,70 @@
+<h1>Управление валютами</h1>
+<div class="currency-manager">
+    <div class="currency-editor">
+        <!-- Форма редактирования параметров валюты -->
+        <currency-form #newCurrencyForm></currency-form>
+        <div class="currency-editor__actions">
+            <!-- Кнопка создания валюты
+
+      Кнопка не доступна, пока параметры валюты не валидны
+      При клике кнопки вызывается метод create() компонента -->
+            <button
+                [disabled]="!newCurrencyForm.valid"
+                class="currency-editor__action-button"
+                (click)="create()"
+            >
+                <i class="fa fa-plus currency-editor__action-icon"></i>
+                <span class="currency-editor__action-label">Добавить</span>
+            </button>
+        </div>
+    </div>
+    <div class="currency-editor__delimiter"></div>
+    <div
+        *ngFor="let currency of currencies; let i=index"
+        class="currency-editor"
+    >
+        <!-- Форма редактирования параметров валюты
+
+    К форме привязывается редактируемая валюта: '[currency]="currency"'
+    Вводится переменная шаблона #currencyForm, которая используется для
+    определения валидности формы в самом шаблоне -->
+        <currency-form
+            #currencyForm
+            [readOnly]="editingCurrencyIndex != i"
+            [currency]="currency"
+        ></currency-form>
+        <div class="currency-editor__actions">
+            <button
+                *ngIf="editingCurrencyIndex != i"
+                class="currency-editor__action-button"
+                (click)="edit(i)"
+            >
+                <i class="fa fa-edit currency-editor__action-icon"></i>
+                <span class="currency-editor__action-label">Изменить</span>
+            </button>
+            <!-- Кнопка сохранения изменений
+
+      Кнопка не доступна, если форма не валидна: '[disabled]="!currencyForm.valid"'
+      При клике кнопки вызывается метод save() компонента: '(click)="save()"' -->
+            <button
+                *ngIf="editingCurrencyIndex == i"
+                [disabled]="!currencyForm.valid"
+                class="currency-editor__action-button"
+                (click)="save(i)"
+            >
+                <i class="fa fa-save currency-editor__action-icon"></i>
+                <span class="currency-editor__action-label">Сохранить</span>
+            </button>
+            <!-- Кнопка удаления валюты
+
+      При клике кнопки вызывается метод delete() компонента: '(click)="delete()"' -->
+            <button
+                *ngIf="editingCurrencyIndex == i"
+                class="currency-editor__action-button currency-editor__action-button_delete  currency-editor__action-button_narrow"
+                (click)="delete(i)"
+            >
+                <i class="fa fa-trash currency-editor__action-icon"></i>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+name: currency_converter_web
+description: Currency converter in AngularDart
+version: 1.0.0
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  angular: ^5.3.0
+  angular_components: ^0.13.0
+  angular_forms: ^2.1.2
+  angular_router: 2.0.0-alpha+22
+  equatable: ^1.0.3
+  currency_converter_models:
+    path: ../models
+
+dev_dependencies:
+  angular_test: ^2.3.0
+  build_runner: ^1.6.0
+  build_test: ^0.10.8
+  build_web_compilers: ^2.3.0
+  pedantic: ^1.8.0
+  sass_builder: ^2.1.3
+  test: ^1.6.0
+  webdev: ^2.5.4

@@ -1,0 +1,10 @@
+<!-- Шаблон вкладки -->
+<div
+    role="button"
+    tabindex="-1"
+    class="tabs__tab"
+    [ngClass]="activeTabCssClass"
+>
+    <!-- Сюда вставляется имя вкладки -->
+    <ng-content></ng-content>
+</div>

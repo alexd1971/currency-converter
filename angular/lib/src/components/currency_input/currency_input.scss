@@ -1,0 +1,30 @@
+$border-color: #cdcdcd;
+
+.converter-input {
+  padding: 0 0 20px;
+}
+
+.converter-input__currency {
+  border: 1px solid $border-color;
+  box-shadow: 0 0 0 5px rgba($border-color, 0.3);
+  display: inline-grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.converter-input__currency-label {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-right: 1px solid $border-color;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 55px;
+}
+
+.converter-input__input {
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  padding-left: 10px;
+}

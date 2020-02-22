@@ -1,0 +1,20 @@
+<!-- Шаблон компонента выбора валюты -->
+<ul class="currency-selector">
+    <!-- Элемент списка
+
+    Подробнее о директиве *ngFor можно почитать здесь:
+    https://pub.dev/documentation/angular/latest/angular/NgFor-class.html -->
+    <li
+        *ngFor="let currency of currencies"
+        class="currency-selector__item"
+    >
+        <div
+            class="currency-selector-item"
+            [ngClass]="setActiveCssClass(currency)"
+            (click)="select(currency)"
+        >
+            <span class="currency-selector-item__code">{{currency.code}}</span>
+            <span class="currency-selector-item__label">{{currency.name}}</span>
+        </div>
+    </li>
+</ul>

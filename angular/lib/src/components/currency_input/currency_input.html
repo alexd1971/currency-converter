@@ -1,0 +1,33 @@
+<!-- Шаблон ввода параметров валюты для конверсии -->
+<div class="wrapper">
+    <div class="converter-input">
+        <!-- Кнопка открытия селектора валюты -->
+        <div class="converter-input__currency">
+            <span
+                class="converter-input__currency-label"
+                (click)="toggleSelector($event)"
+            >
+                {{currencyConversion?.currency?.code}}
+                <i
+                    class="fa"
+                    [ngClass]="selectorButtonCssClass"
+                    style="font-weight: bolder;"
+                ></i>
+            </span>
+            <!-- Поле ввода количества -->
+            <input
+                #input
+                class="converter-input__input"
+                [value]="currencyConversion?.value"
+            >
+        </div>
+        <!-- Селектор валюты
+
+      Показывается если признак selectorIsOpen == true -->
+        <currency-selector
+            *ngIf="selectorIsOpen"
+            [selected]="currencyConversion?.currency"
+            (onSelect)="changeCurrency($event)"
+        ></currency-selector>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<!-- Шаблон конвертера валют -->
+<h1>Конвертер валют</h1>
+<!-- Кнопка добавления конверсии -->
+<div class="currency-editor__actions">
+    <button
+        class="currency-editor__action-button"
+        (click)="add()"
+    >
+        <i class="fa fa-plus currency-editor__action-icon"></i>
+        <span class="currency-editor__action-label">Добавить</span>
+    </button>
+</div>
+<!-- Конверсия
+
+  Количество конверсий формируется динамически на основании списка conversions -->
+<div
+    class="conversion"
+    *ngFor="let conversion of conversions; let i=index"
+>
+    <currency-input
+        [conversion]="conversion"
+        (onChange)="onChange(i)"
+    ></currency-input>
+    <!-- Кнопка удаления конверсии -->
+    <div class="currency-editor__actions">
+        <button
+            class="currency-editor__action-button currency-editor__action-button_delete currency-editor-button_narrow"
+            (click)="delete(i)"
+        >
+            <i class="fa fa-trash currency-editor__action-icon"></i>
+        </button>
+    </div>
+</div>

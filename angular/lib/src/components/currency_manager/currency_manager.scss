@@ -1,0 +1,95 @@
+.currency-manager {
+  display: grid;
+  grid-gap: 15px;
+}
+
+.currency-editor__delimiter {
+  background: #e0e0e0;
+  border: none;
+  display: block;
+  height: 2px;
+}
+.currency-editor {
+  align-items: flex-start;
+  display: grid;
+  grid-gap: 5px 15px;
+  grid-template-columns: 1fr 100px;
+}
+
+.currency-editor__actions {
+  display: flex;
+  padding-top: 0.5em;
+}
+
+.currency-editor__action-label {
+  display: inline-block;
+  font-size: 0.85em;
+  padding-top: 5px;
+}
+
+.currency-editor__action-icon {
+  display: block;
+  margin: 0 auto;
+  padding-top: 3px;
+  transform: scale(1.4);
+}
+
+.currency-editor__action-button {
+  background: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  height: 50px;
+  margin-right: 5px;
+  padding: 0 15px;
+  text-align: center;
+  transition: box-shadow 0.2s, background-color 0.2s;
+  width: 100%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    background: darken(#e0e0e0, 5%);
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.2;
+  }
+}
+
+.currency-editor__action-button_delete {
+  background: #c00;
+  color: #fff;
+
+  &:hover {
+    background: darken(#c00, 5%);
+  }
+}
+
+.currency-editor__action-button_narrow {
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 50px;
+}
+
+.currency-editor__message {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-size: 0.85em;
+  grid-column-end: 5;
+  grid-column-start: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.currency-editor__message_error {
+  background: rgba(#c00, 0.2);
+}

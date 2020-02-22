@@ -1,0 +1,6 @@
+.currency-editor__item {
+  align-items: flex-end;
+  display: grid;
+  grid-gap: 5px 15px;
+  grid-template-columns: 90px 1fr 100px;
+}
