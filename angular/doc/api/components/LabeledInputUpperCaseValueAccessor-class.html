@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the LabeledInputUpperCaseValueAccessor class from the components library, for the Dart programming language.">
+  <title>LabeledInputUpperCaseValueAccessor class - components library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  <!-- header placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">currency_converter_web</a></li>
+    <li><a href="components/components-library.html">components</a></li>
+    <li class="self-crumb">LabeledInputUpperCaseValueAccessor class</li>
+  </ol>
+  <div class="self-name">LabeledInputUpperCaseValueAccessor</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">currency_converter_web</a></li>
+      <li><a href="components/components-library.html">components</a></li>
+      <li class="self-crumb">LabeledInputUpperCaseValueAccessor class</li>
+    </ol>
+    
+    <h5>components library</h5>
+    <ol>
+      <li class="section-title"><a href="components/components-library.html#classes">Classes</a></li>
+      <li><a href="components/Application-class.html">Application</a></li>
+      <li><a href="components/ConversionInput-class.html">ConversionInput</a></li>
+      <li><a href="components/CurrencyConverter-class.html">CurrencyConverter</a></li>
+      <li><a href="components/CurrencyEditor-class.html">CurrencyEditor</a></li>
+      <li><a href="components/CurrencyManager-class.html">CurrencyManager</a></li>
+      <li><a href="components/CurrencySelector-class.html">CurrencySelector</a></li>
+      <li><a href="components/LabeledInput-class.html">LabeledInput</a></li>
+      <li><a href="components/LabeledInputDefaultValueAccessor-class.html">LabeledInputDefaultValueAccessor</a></li>
+      <li><a href="components/LabeledInputNumberValueAccessor-class.html">LabeledInputNumberValueAccessor</a></li>
+      <li><a href="components/LabeledInputUpperCaseValueAccessor-class.html">LabeledInputUpperCaseValueAccessor</a></li>
+      <li><a href="components/Tab-class.html">Tab</a></li>
+      <li><a href="components/TabPanel-class.html">TabPanel</a></li>
+    
+    
+      <li class="section-title"><a href="components/components-library.html#mixins">Mixins</a></li>
+      <li><a href="components/ChangeHandler-mixin.html">ChangeHandler</a></li>
+      <li><a href="components/TouchHandler-mixin.html">TouchHandler</a></li>
+    
+    
+    
+    
+      <li class="section-title"><a href="components/components-library.html#enums">Enums</a></li>
+      <li><a href="components/Mode-class.html">Mode</a></li>
+    
+    
+    </ol>
+  </div>
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-class">LabeledInputUpperCaseValueAccessor</span> class </h1></div>
+
+    <section class="desc markdown">
+      <p>Директива реализующая интефейс <code>ControlValueAccessor</code> для компнента
+<a href="components/LabeledInput-class.html">LabeledInput</a></p>
+<p>Реализация директивы аналогична реализации <a href="components/LabeledInputDefaultValueAccessor-class.html">LabeledInputDefaultValueAccessor</a>
+за исключением того, что здесь реализуется приведение значения поля к
+верхнему регистру.</p>
+<p>При подключении директивы к компоненту через параметр аннотации <code>directives</code>
+она автоматически привязывается ко всем элементам <code>labeled-input</code>, у которых
+указаны атрибуты <code>ngControl</code> и <code>type=upper</code> (см. параметр <code>selector</code>)</p>
+    </section>
+    
+    <section>
+      <dl class="dl-horizontal">
+
+
+        <dt>Mixed in types</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="components/ChangeHandler-mixin.html">ChangeHandler</a><span class="signature">&lt;<wbr><span class="type-parameter">String</span>&gt;</span></li>
+          <li><a href="components/TouchHandler-mixin.html">TouchHandler</a></li>
+        </ul></dd>
+
+
+
+        <dt>Annotations</dt>
+        <dd><ul class="annotation-list clazz-relationships">
+          <li>@Directive(selector: &#39;labeled-input[type=upper][ngControl]&#39;, providers: [ExistingProvider.forToken(ngValueAccessor, LabeledInputUpperCaseValueAccessor)])</li>
+        </ul></dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="LabeledInputUpperCaseValueAccessor" class="callable">
+          <span class="name"><a href="components/LabeledInputUpperCaseValueAccessor/LabeledInputUpperCaseValueAccessor.html">LabeledInputUpperCaseValueAccessor</a></span><span class="signature">(<span class="parameter" id="-param-_input"><span class="type-annotation"><a href="components/LabeledInput-class.html">LabeledInput</a></span> <span class="parameter-name">_input</span></span>)</span>
+        </dt>
+        <dd>
+          Создает директиву <a href="components/LabeledInputUpperCaseValueAccessor/LabeledInputUpperCaseValueAccessor.html">[...]</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="components/ChangeHandler/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; int</span>         
+        </dt>
+        <dd class="inherited">
+          The hash code for this object. <a href="components/ChangeHandler/hashCode.html">[...]</a>
+                  <div class="features">read-only, inherited</div>
+</dd>
+        <dt id="onChange" class="property inherited">
+          <span class="name"><a href="components/ChangeHandler/onChange.html">onChange</a></span>
+          <span class="signature">&#8596; ChangeFunction<span class="signature">&lt;<wbr><span class="type-parameter">String</span>&gt;</span></span>         
+        </dt>
+        <dd class="inherited">
+          
+                  <div class="features">read / write, inherited</div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="components/ChangeHandler/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; Type</span>         
+        </dt>
+        <dd class="inherited">
+          A representation of the runtime type of the object.
+                  <div class="features">read-only, inherited</div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="changedHandler" class="callable">
+          <span class="name"><a href="components/LabeledInputUpperCaseValueAccessor/changedHandler.html">changedHandler</a></span><span class="signature">(<wbr><span class="parameter" id="changedHandler-param-_"><span class="type-annotation">dynamic</span> <span class="parameter-name">_</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+                  </dt>
+        <dd>
+          Обрабатывает изменения значения элемента формы
+                  <div class="features">@HostListener(&#39;onInput&#39;)</div>
+</dd>
+        <dt id="onDisabledChanged" class="callable">
+          <span class="name"><a href="components/LabeledInputUpperCaseValueAccessor/onDisabledChanged.html">onDisabledChanged</a></span><span class="signature">(<wbr><span class="parameter" id="onDisabledChanged-param-isDisabled"><span class="type-annotation">bool</span> <span class="parameter-name">isDisabled</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+                  </dt>
+        <dd>
+          В зависимости от значения аргумента делает элемент формы
+доступным или недоступным.
+                  
+</dd>
+        <dt id="writeValue" class="callable">
+          <span class="name"><a href="components/LabeledInputUpperCaseValueAccessor/writeValue.html">writeValue</a></span><span class="signature">(<wbr><span class="parameter" id="writeValue-param-value"><span class="type-annotation">String</span> <span class="parameter-name">value</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+                  </dt>
+        <dd>
+          Устанавливает значение элемента формы
+                  
+</dd>
+        <dt id="noSuchMethod" class="callable inherited">
+          <span class="name"><a href="components/ChangeHandler/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          Invoked when a non-existent method or property is accessed. <a href="components/ChangeHandler/noSuchMethod.html">[...]</a>
+                  <div class="features">inherited</div>
+</dd>
+        <dt id="registerOnChange" class="callable inherited">
+          <span class="name"><a href="components/ChangeHandler/registerOnChange.html">registerOnChange</a></span><span class="signature">(<wbr><span class="parameter" id="registerOnChange-param-fn"><span class="type-annotation">dynamic</span> <span class="parameter-name">fn</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          Регистрирует функцию, которая вызывается при изменениях значения
+элемента формы
+                  <div class="features">inherited</div>
+</dd>
+        <dt id="registerOnTouched" class="callable inherited">
+          <span class="name"><a href="components/TouchHandler/registerOnTouched.html">registerOnTouched</a></span><span class="signature">(<wbr><span class="parameter" id="registerOnTouched-param-fn"><span class="type-annotation">dynamic</span> <span class="parameter-name">fn</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          Регистрирует функцию, которая вызывается при выходе из элемента формы. <a href="components/TouchHandler/registerOnTouched.html">[...]</a>
+                  <div class="features">inherited</div>
+</dd>
+        <dt id="toString" class="callable inherited">
+          <span class="name"><a href="components/ChangeHandler/toString.html">toString</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; String</span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          Returns a string representation of this object.
+                  <div class="features">inherited</div>
+</dd>
+        <dt id="touchHandler" class="callable inherited">
+          <span class="name"><a href="components/TouchHandler/touchHandler.html">touchHandler</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          
+                  <div class="features">@HostListener(&#39;onBlur&#39;), inherited</div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+          <span class="name"><a href="components/ChangeHandler/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">dynamic</span> <span class="parameter-name">other</span></span>)
+            <span class="returntype parameter">&#8594; bool</span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          The equality operator. <a href="components/ChangeHandler/operator_equals.html">[...]</a>
+                  <div class="features">inherited</div>
+</dd>
+      </dl>
+    </section>
+
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+    
+      <li class="section-title"><a href="components/LabeledInputUpperCaseValueAccessor-class.html#constructors">Constructors</a></li>
+      <li><a href="components/LabeledInputUpperCaseValueAccessor/LabeledInputUpperCaseValueAccessor.html">LabeledInputUpperCaseValueAccessor</a></li>
+    
+      <li class="section-title inherited">
+        <a href="components/LabeledInputUpperCaseValueAccessor-class.html#instance-properties">Properties</a>
+      </li>
+      <li class="inherited"><a href="components/ChangeHandler/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="components/ChangeHandler/onChange.html">onChange</a></li>
+      <li class="inherited"><a href="components/ChangeHandler/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title"><a href="components/LabeledInputUpperCaseValueAccessor-class.html#instance-methods">Methods</a></li>
+      <li><a href="components/LabeledInputUpperCaseValueAccessor/changedHandler.html">changedHandler</a></li>
+      <li><a href="components/LabeledInputUpperCaseValueAccessor/onDisabledChanged.html">onDisabledChanged</a></li>
+      <li><a href="components/LabeledInputUpperCaseValueAccessor/writeValue.html">writeValue</a></li>
+      <li class="inherited"><a href="components/ChangeHandler/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="components/ChangeHandler/registerOnChange.html">registerOnChange</a></li>
+      <li class="inherited"><a href="components/TouchHandler/registerOnTouched.html">registerOnTouched</a></li>
+      <li class="inherited"><a href="components/ChangeHandler/toString.html">toString</a></li>
+      <li class="inherited"><a href="components/TouchHandler/touchHandler.html">touchHandler</a></li>
+    
+      <li class="section-title inherited"><a href="components/LabeledInputUpperCaseValueAccessor-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="components/ChangeHandler/operator_equals.html">operator ==</a></li>
+    
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    currency_converter_web
+      1.0.0
+  </span>
+
+  <!-- footer-text placeholder -->
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- footer placeholder -->
+
+</body>
+
+</html>

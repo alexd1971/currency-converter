@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the LabeledInput class from the components library, for the Dart programming language.">
+  <title>LabeledInput class - components library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  <!-- header placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">currency_converter_web</a></li>
+    <li><a href="components/components-library.html">components</a></li>
+    <li class="self-crumb">LabeledInput class</li>
+  </ol>
+  <div class="self-name">LabeledInput</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">currency_converter_web</a></li>
+      <li><a href="components/components-library.html">components</a></li>
+      <li class="self-crumb">LabeledInput class</li>
+    </ol>
+    
+    <h5>components library</h5>
+    <ol>
+      <li class="section-title"><a href="components/components-library.html#classes">Classes</a></li>
+      <li><a href="components/Application-class.html">Application</a></li>
+      <li><a href="components/ConversionInput-class.html">ConversionInput</a></li>
+      <li><a href="components/CurrencyConverter-class.html">CurrencyConverter</a></li>
+      <li><a href="components/CurrencyEditor-class.html">CurrencyEditor</a></li>
+      <li><a href="components/CurrencyManager-class.html">CurrencyManager</a></li>
+      <li><a href="components/CurrencySelector-class.html">CurrencySelector</a></li>
+      <li><a href="components/LabeledInput-class.html">LabeledInput</a></li>
+      <li><a href="components/LabeledInputDefaultValueAccessor-class.html">LabeledInputDefaultValueAccessor</a></li>
+      <li><a href="components/LabeledInputNumberValueAccessor-class.html">LabeledInputNumberValueAccessor</a></li>
+      <li><a href="components/LabeledInputUpperCaseValueAccessor-class.html">LabeledInputUpperCaseValueAccessor</a></li>
+      <li><a href="components/Tab-class.html">Tab</a></li>
+      <li><a href="components/TabPanel-class.html">TabPanel</a></li>
+    
+    
+      <li class="section-title"><a href="components/components-library.html#mixins">Mixins</a></li>
+      <li><a href="components/ChangeHandler-mixin.html">ChangeHandler</a></li>
+      <li><a href="components/TouchHandler-mixin.html">TouchHandler</a></li>
+    
+    
+    
+    
+      <li class="section-title"><a href="components/components-library.html#enums">Enums</a></li>
+      <li><a href="components/Mode-class.html">Mode</a></li>
+    
+    
+    </ol>
+  </div>
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-class">LabeledInput</span> class </h1></div>
+
+    <section class="desc markdown">
+      <p>Поле ввода</p>
+<p>Является оберткой стандартного элемента <code>input</code></p>
+<p>В отличие от стандартного ввода в этот компонент интегрирована метка.</p>
+<p>Для добавления в шаблон используется элемент <code>&lt;labeled-input&gt;&lt;/labeled-input&gt;</code></p>
+<p>Поддержиаемые атрибуты:</p>
+<ul>
+<li><a href="components/LabeledInput/id.html">id</a>::<code>String</code> - идентификатор; по умолчанию генерируется автоматически</li>
+<li><a href="components/LabeledInput/readOnly.html">readOnly</a>::<code>bool</code> - только для чтения</li>
+<li><a href="components/LabeledInput/disabled.html">disabled</a>::<code>bool</code> - недоступный</li>
+<li><a href="components/LabeledInput/label.html">label</a>::<code>String</code> - метка поля ввода</li>
+</ul>
+<p>Поддерживаемые события:</p>
+<ul>
+<li><a href="components/LabeledInput/onInput.html">onInput</a> - генерируется при изменении в поле</li>
+<li><a href="components/LabeledInput/onBlur.html">onBlur</a> - генерируется при выходе из поля</li>
+<li><a href="components/LabeledInput/onFocus.html">onFocus</a> - генерируется при получении фокуса ввода</li>
+</ul>
+<p>Если поле является эелементом формы и с ним связан валидатор/валидаторы,
+то поле автоматически реагирует на изменение валидности поля</p>
+<p>Компонент реализует интерфейс <code>AfterViewInit</code>. Это означает, что реализуется
+метод <a href="components/LabeledInput/ngAfterViewInit.html">ngAfterViewInit</a>, который срабатывает сразу после инициализации
+представления компонента и используется для установки обработчиков событий
+на внутреннем элементе <code>input</code>, что необходимо для работы компонента.</p>
+<p>Для того, чтобы получить все прелести интеграции <a href="components/LabeledInput-class.html">LabeledInput</a> в форму
+к нему необходимо привязать <code>ControlValueAccessor</code> - интерфейс, позволяющий:</p>
+<ul>
+<li>осуществлять доступ к значению поля, выполняя двунаправленную привязку
+поля и модели данных; это означает, что при изменении значения в поле, оно
+автоматически попадает в атрибут модели данных и, наоборот, при изменении
+значения в модели, оно автоматически появляется в поле;</li>
+<li>автоматически приводить в соответствие типы данных поля и атрибута модели
+данных;</li>
+<li>автоматически производить валидацию поля;</li>
+<li>автоматически делать форму не валидной, до тех пор, пока все поля формы
+не будут валидными.</li>
+</ul>
+<p>О том как красиво и элегантно привязать весь этот функционал к полю и еще
+много интересного читайте в описании компонентов
+<a href="components/LabeledInputDefaultValueAccessor-class.html">LabeledInputDefaultValueAccessor</a> и <a href="components/LabeledInputNumberValueAccessor-class.html">LabeledInputNumberValueAccessor</a></p>
+    </section>
+    
+    <section>
+      <dl class="dl-horizontal">
+
+
+
+
+
+        <dt>Annotations</dt>
+        <dd><ul class="annotation-list clazz-relationships">
+          <li>@Component(selector: &#39;labeled-input&#39;, templateUrl: &#39;labeled_input.html&#39;, styleUrls: [&#39;labeled_input.css&#39;], directives: [NgClass])</li>
+        </ul></dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="LabeledInput" class="callable">
+          <span class="name"><a href="components/LabeledInput/LabeledInput.html">LabeledInput</a></span><span class="signature">(<span class="parameter" id="-param-_injector"><span class="type-annotation">Injector</span> <span class="parameter-name">_injector</span></span>)</span>
+        </dt>
+        <dd>
+          Создает компонент и автоматически инжектирует инжектор.
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="control" class="property">
+          <span class="name"><a href="components/LabeledInput/control.html">control</a></span>
+          <span class="signature">&#8596; NgControl</span>         
+        </dt>
+        <dd>
+          Элемент управления формы <a href="components/LabeledInput/control.html">[...]</a>
+                  <div class="features">read / write</div>
+</dd>
+        <dt id="disabled" class="property">
+          <span class="name"><a href="components/LabeledInput/disabled.html">disabled</a></span>
+          <span class="signature">&#8596; bool</span>         
+        </dt>
+        <dd>
+          Признак доступностии
+                  <div class="features">@Input(), read / write</div>
+</dd>
+        <dt id="id" class="property">
+          <span class="name"><a href="components/LabeledInput/id.html">id</a></span>
+          <span class="signature">&#8596; String</span>         
+        </dt>
+        <dd>
+          Идентификатор инпута <a href="components/LabeledInput/id.html">[...]</a>
+                  <div class="features">@Input(), read / write</div>
+</dd>
+        <dt id="input" class="property">
+          <span class="name"><a href="components/LabeledInput/input.html">input</a></span>
+          <span class="signature">&#8596; InputElement</span>         
+        </dt>
+        <dd>
+          Внутренний <code>input</code>-элемент <a href="components/LabeledInput/input.html">[...]</a>
+                  <div class="features">@ViewChild(&#39;input&#39;), read / write</div>
+</dd>
+        <dt id="invalidCssClass" class="property">
+          <span class="name"><a href="components/LabeledInput/invalidCssClass.html">invalidCssClass</a></span>
+          <span class="signature">&#8594; Map<span class="signature">&lt;<wbr><span class="type-parameter">String</span>, <span class="type-parameter">bool</span>&gt;</span></span>         
+        </dt>
+        <dd>
+          Геттер определяет добавление класса невалидного поля <a href="components/LabeledInput/invalidCssClass.html">[...]</a>
+                  <div class="features">read-only</div>
+</dd>
+        <dt id="label" class="property">
+          <span class="name"><a href="components/LabeledInput/label.html">label</a></span>
+          <span class="signature">&#8596; String</span>         
+        </dt>
+        <dd>
+          Метка
+                  <div class="features">@Input(), read / write</div>
+</dd>
+        <dt id="onBlur" class="property">
+          <span class="name"><a href="components/LabeledInput/onBlur.html">onBlur</a></span>
+          <span class="signature">&#8594; Stream<span class="signature">&lt;<wbr><span class="type-parameter">Null</span>&gt;</span></span>         
+        </dt>
+        <dd>
+          Поток событий <code>onBlur</code>
+                  <div class="features">@Output(), read-only</div>
+</dd>
+        <dt id="onFocus" class="property">
+          <span class="name"><a href="components/LabeledInput/onFocus.html">onFocus</a></span>
+          <span class="signature">&#8594; Stream<span class="signature">&lt;<wbr><span class="type-parameter">Null</span>&gt;</span></span>         
+        </dt>
+        <dd>
+          Поток событий <code>onFocus</code>
+                  <div class="features">@Output(), read-only</div>
+</dd>
+        <dt id="onInput" class="property">
+          <span class="name"><a href="components/LabeledInput/onInput.html">onInput</a></span>
+          <span class="signature">&#8594; Stream<span class="signature">&lt;<wbr><span class="type-parameter">String</span>&gt;</span></span>         
+        </dt>
+        <dd>
+          Поток событий <code>onInput</code>
+                  <div class="features">@Output(), read-only</div>
+</dd>
+        <dt id="readOnly" class="property">
+          <span class="name"><a href="components/LabeledInput/readOnly.html">readOnly</a></span>
+          <span class="signature">&#8596; bool</span>         
+        </dt>
+        <dd>
+          Признак только для чтения
+                  <div class="features">@Input(), read / write</div>
+</dd>
+        <dt id="valid" class="property">
+          <span class="name"><a href="components/LabeledInput/valid.html">valid</a></span>
+          <span class="signature">&#8594; bool</span>         
+        </dt>
+        <dd>
+          Признак валидности поля <a href="components/LabeledInput/valid.html">[...]</a>
+                  <div class="features">read-only</div>
+</dd>
+        <dt id="value" class="property">
+          <span class="name"><a href="components/LabeledInput/value.html">value</a></span>
+          <span class="signature">&#8596; String</span>         
+        </dt>
+        <dd>
+          Значение, введенное в поле ввода
+                  <div class="features">read / write</div>
+</dd>
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="components/LabeledInput/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; int</span>         
+        </dt>
+        <dd class="inherited">
+          The hash code for this object. <a href="components/LabeledInput/hashCode.html">[...]</a>
+                  <div class="features">read-only, inherited</div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="components/LabeledInput/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; Type</span>         
+        </dt>
+        <dd class="inherited">
+          A representation of the runtime type of the object.
+                  <div class="features">read-only, inherited</div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="ngAfterViewInit" class="callable">
+          <span class="name"><a href="components/LabeledInput/ngAfterViewInit.html">ngAfterViewInit</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+                  </dt>
+        <dd>
+          Запускается сразу после инициализации представления компонента <a href="components/LabeledInput/ngAfterViewInit.html">[...]</a>
+                  
+</dd>
+        <dt id="ngOnDestroy" class="callable">
+          <span class="name"><a href="components/LabeledInput/ngOnDestroy.html">ngOnDestroy</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+                  </dt>
+        <dd>
+          Перед уничтожением компонента закрывает потоки событий <a href="components/LabeledInput/onBlur.html">onBlur</a>,
+<a href="components/LabeledInput/onInput.html">onInput</a> и <a href="components/LabeledInput/onFocus.html">onFocus</a>
+                  
+</dd>
+        <dt id="noSuchMethod" class="callable inherited">
+          <span class="name"><a href="components/LabeledInput/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          Invoked when a non-existent method or property is accessed. <a href="components/LabeledInput/noSuchMethod.html">[...]</a>
+                  <div class="features">inherited</div>
+</dd>
+        <dt id="toString" class="callable inherited">
+          <span class="name"><a href="components/LabeledInput/toString.html">toString</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; String</span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          Returns a string representation of this object.
+                  <div class="features">inherited</div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+          <span class="name"><a href="components/LabeledInput/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation">dynamic</span> <span class="parameter-name">other</span></span>)
+            <span class="returntype parameter">&#8594; bool</span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          The equality operator. <a href="components/LabeledInput/operator_equals.html">[...]</a>
+                  <div class="features">inherited</div>
+</dd>
+      </dl>
+    </section>
+
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <ol>
+    
+      <li class="section-title"><a href="components/LabeledInput-class.html#constructors">Constructors</a></li>
+      <li><a href="components/LabeledInput/LabeledInput.html">LabeledInput</a></li>
+    
+      <li class="section-title">
+        <a href="components/LabeledInput-class.html#instance-properties">Properties</a>
+      </li>
+      <li><a href="components/LabeledInput/control.html">control</a></li>
+      <li><a href="components/LabeledInput/disabled.html">disabled</a></li>
+      <li><a href="components/LabeledInput/id.html">id</a></li>
+      <li><a href="components/LabeledInput/input.html">input</a></li>
+      <li><a href="components/LabeledInput/invalidCssClass.html">invalidCssClass</a></li>
+      <li><a href="components/LabeledInput/label.html">label</a></li>
+      <li><a href="components/LabeledInput/onBlur.html">onBlur</a></li>
+      <li><a href="components/LabeledInput/onFocus.html">onFocus</a></li>
+      <li><a href="components/LabeledInput/onInput.html">onInput</a></li>
+      <li><a href="components/LabeledInput/readOnly.html">readOnly</a></li>
+      <li><a href="components/LabeledInput/valid.html">valid</a></li>
+      <li><a href="components/LabeledInput/value.html">value</a></li>
+      <li class="inherited"><a href="components/LabeledInput/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="components/LabeledInput/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title"><a href="components/LabeledInput-class.html#instance-methods">Methods</a></li>
+      <li><a href="components/LabeledInput/ngAfterViewInit.html">ngAfterViewInit</a></li>
+      <li><a href="components/LabeledInput/ngOnDestroy.html">ngOnDestroy</a></li>
+      <li class="inherited"><a href="components/LabeledInput/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="components/LabeledInput/toString.html">toString</a></li>
+    
+      <li class="section-title inherited"><a href="components/LabeledInput-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="components/LabeledInput/operator_equals.html">operator ==</a></li>
+    
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    currency_converter_web
+      1.0.0
+  </span>
+
+  <!-- footer-text placeholder -->
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- footer placeholder -->
+
+</body>
+
+</html>

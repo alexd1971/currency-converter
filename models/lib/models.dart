@@ -1,7 +1,14 @@
-/// Support for doing something awesome.
+/// Модели данных конвертера валют
 ///
-/// More dartdocs go here.
+/// [Currency] - валюта
+/// [Conversion] - конверсия валюты
+///
+/// Библиотека используется во всех пакетах приложения:
+/// - в web-интерфейсе
+/// - в мобильном приложении
+/// - в компонентах бизнес-логики
+/// - в сервисах работы с данными
 library models;
 
 export 'src/currency.dart';
-export 'src/currency_conversion.dart';
+export 'src/conversion.dart';

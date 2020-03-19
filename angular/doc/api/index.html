@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 0.29.1">
+  <meta name="description" content="currency_converter_web API docs, for the Dart programming language.">
+  <title>currency_converter_web - Dart API docs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  <!-- header placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li class="self-crumb">currency_converter_web package</li>
+  </ol>
+  <div class="self-name">currency_converter_web</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li class="self-crumb">currency_converter_web package</li>
+    </ol>
+    
+    <h5 class="hidden-xs"><span class="package-name">currency_converter_web</span> <span class="package-kind">package</span></h5>
+    <ol>
+          <li class="section-title">Libraries</li>
+          <li><a href="components/components-library.html">components</a></li>
+          <li><a href="routes/routes-library.html">routes</a></li>
+          <li><a href="services/services-library.html">services</a></li>
+          <li><a href="validators/validators-library.html">validators</a></li>
+    </ol>
+  </div>
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <section class="desc markdown">
+        <h1 id="---angulardart">Конвертер валют на AngularDart</h1>
+<p>Данный проект является учебно-демонстрационным. Он покрывает большую часть возможностей фреймворка AngularDart. То что не охвачено данным проектом легко можно взять из документации.</p>
+<h2 id="-">Цели проекта:</h2>
+<ul>
+<li>Демонстрация возможностей фреймворка AngularDart</li>
+<li>Демонстрация внутренней архитектуры проекта на AngularDart</li>
+<li>Демонстрация приемов декомпозиции приложения</li>
+<li>Формирование понимания составных частей приложения:
+<ul>
+<li>компоненты и шаблоны</li>
+<li>директивы</li>
+<li>маршрутизация</li>
+<li>формы и валидация</li>
+<li>генерация и обработка событий</li>
+</ul>
+</li>
+<li>Демонстрация подключения бизнес логики к интерфейсу с использованием BLoC-паттерна (Business Logic Component)</li>
+</ul>
+<h2 id="">Благодарности</h2>
+<p>Я хочу выразить благодарность Роману Петрову за идею приложения, которая оказалась очень удачной в том смысле, что на примере реализации этой идеи получилось продемонстрировать большую часть возможностей AngularDart, включая те, которые не достаточно отражены в документации и ответах на StackOverflow. А также я благодарен ему за html-верстку и css, которые используются в приложении.</p>
+<h2 id="--2">Интерфейс приложения</h2>
+<p>Интерфейс состоит из двух разделов:</p>
+<ul>
+<li>собственно конвертера валют</li>
+<li>раздела управления валютами</li>
+</ul>
+<p>Каждый из разделов расположен на соответствующей вкладке. Переключение вкладок производит переключение между разделами.</p>
+<h3 id="--3">Конвертер валют</h3>
+<p>Конвертер валют может содержать несколько конверсий, которые можно произвольно добавлять и удалять. Для каждой конверсии можно выбрать валюту и указать сумму. При изменении суммы в любой из конверсий автоматически пересчитываются суммы в остальных конверсиях в соответствии с выбранными валютами.</p>
+<h3 id="--4">Управление валютами</h3>
+<p>Данный раздел предназначен для управления списком известных конвертору валют. Интерфейс состоит из формы добавления новой валюты и списка валют, каждый элемент которого можно редактировать (изменить или удалить).</p>
+<h2 id="--5">Архитектура проекта</h2><img src="screenshots/converter.png" alt="converter" width="500">
+<img src="screenshots/manager.png" alt="manager" width="900">
+<h2 id="--6">Запуск приложения</h2>
+<ol>
+<li>Установить Dart, если он еще не установлен</li>
+<li>Клонировать репозиторий</li>
+<li><code>cd /path/to/repository/angular</code></li>
+<li><code>pub get</code></li>
+<li><code>pub run webdev serve</code></li>
+<li>Открыть в браузере URL <a href="http://localhost:8080">http://localhost:8080</a></li>
+</ol>
+<h2 id="--7">Порядок изучения</h2>
+<ol>
+<li><a href="web/main.dart">web/main.dart</a></li>
+<li><a href="web/index.html">web/index.html</a></li>
+<li><a href="lib/src/routes/route_paths.dart">lib/src/routes/route_paths.dart</a></li>
+<li><a href="lib/src/routes/routes.dart">lib/src/routes/routes.dart</a></li>
+<li><a href="lib/src/components/application/application.dart">lib/src/components/application/application.dart</a></li>
+<li><a href="lib/src/components/application/application.html">lib/src/components/application/application.html</a></li>
+<li><a href="lib/src/components/tab_panel/tab_panel.dart">lib/src/components/tab_panel/tab_panel.dart</a></li>
+<li><a href="lib/src/components/tab_panel/tab_panel.html">lib/src/components/tab_panel/tab_panel.html</a></li>
+<li><a href="lib/src/components/tab/tab.dart">lib/src/components/tab/tab.dart</a></li>
+<li><a href="lib/src/components/tab/tab.html">lib/src/components/tab/tab.html</a></li>
+<li><a href="lib/src/components/currency_manager/currency_manager.dart">lib/src/components/currency_manager/currency_manager.dart</a></li>
+<li><a href="lib/src/components/currency_manager/currency_manager.html">lib/src/components/currency_manager/currency_manager.html</a></li>
+<li><a href="lib/src/components/currency_editor/currency_editor.dart">lib/src/components/currency_editor/currency_editor.dart</a></li>
+<li><a href="lib/src/components/currency_editor/currency_editor.html">lib/src/components/currency_editor/currency_editor.html</a></li>
+<li><a href="lib/src/validators/currency_code_validator.dart">lib/src/validators/currency_code_validator.dart</a></li>
+<li><a href="lib/src/validators/only_number_validator.dart">lib/src/validators/only_number_validator.dart</a></li>
+<li><a href="lib/src/components/labeled_input/labeled_input.dart">lib/src/components/labeled_input/labeled_input.dart</a></li>
+<li><a href="lib/src/components/labeled_input/labeled_input.html">lib/src/components/labeled_input/labeled_input.html</a></li>
+<li><a href="lib/src/components/labeled_input/labeled_input_default_value_accessor.dart">lib/src/components/labeled_input/labeled_input_default_value_accessor.dart</a></li>
+<li><a href="lib/src/components/labeled_input/handler_mixins.dart">lib/src/components/labeled_input/handler_mixins.dart</a></li>
+<li><a href="lib/src/components/labeled_input/labeled_input_uppercase_value_accessor.dart">lib/src/components/labeled_input/labeled_input_uppercase_value_accessor.dart</a></li>
+<li><a href="lib/src/components/labeled_input/labeled_input_number_value_accessor.dart">lib/src/components/labeled_input/labeled_input_number_value_accessor.dart</a></li>
+<li><a href="lib/src/components/currency_converter/currency_converter.dart">lib/src/components/currency_converter/currency_converter.dart</a></li>
+<li><a href="lib/src/components/currency_converter/currency_converter.html">lib/src/components/currency_converter/currency_converter.html</a></li>
+<li><a href="lib/src/components/conversion_input/conversion_input.dart">lib/src/components/conversion_input/conversion_input.dart</a></li>
+<li><a href="lib/src/components/conversion_input/conversion_input.html">lib/src/components/conversion_input/conversion_input.html</a></li>
+<li><a href="lib/src/services/local_currency_service.dart">lib/src/services/local_currency_service.dart</a></li>
+</ol>
+      </section>
+      
+        <section class="summary">
+            <h2>Libraries</h2>
+          <dl>
+            <dt id="components">
+              <span class="name"><a href="components/components-library.html">components</a></span>             
+            </dt>
+            <dd>
+              
+            </dd>            <dt id="routes">
+              <span class="name"><a href="routes/routes-library.html">routes</a></span>             
+            </dt>
+            <dd>
+              
+            </dd>            <dt id="services">
+              <span class="name"><a href="services/services-library.html">services</a></span>             
+            </dt>
+            <dd>
+              
+            </dd>            <dt id="validators">
+              <span class="name"><a href="validators/validators-library.html">validators</a></span>             
+            </dt>
+            <dd>
+              
+            </dd>          </dl>
+        </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    currency_converter_web
+      1.0.0
+  </span>
+
+  <!-- footer-text placeholder -->
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- footer placeholder -->
+
+</body>
+
+</html>

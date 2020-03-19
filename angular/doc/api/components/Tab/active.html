@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the active property from the Tab class, for the Dart programming language.">
+  <title>active property - Tab class - components library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  <!-- header placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">currency_converter_web</a></li>
+    <li><a href="components/components-library.html">components</a></li>
+    <li><a href="components/Tab-class.html">Tab</a></li>
+    <li class="self-crumb">active property</li>
+  </ol>
+  <div class="self-name">active</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">currency_converter_web</a></li>
+      <li><a href="components/components-library.html">components</a></li>
+      <li><a href="components/Tab-class.html">Tab</a></li>
+      <li class="self-crumb">active property</li>
+    </ol>
+    
+    <h5>Tab class</h5>
+    <ol>
+    
+        <li class="section-title"><a href="components/Tab-class.html#constructors">Constructors</a></li>
+        <li><a href="components/Tab/Tab.html">Tab</a></li>
+    
+        <li class="section-title">
+            <a href="components/Tab-class.html#instance-properties">Properties</a>
+        </li>
+        <li><a href="components/Tab/active.html">active</a></li>
+        <li><a href="components/Tab/activeTabCssClass.html">activeTabCssClass</a></li>
+        <li><a href="components/Tab/id.html">id</a></li>
+        <li><a href="components/Tab/onActivate.html">onActivate</a></li>
+        <li><a href="components/Tab/props.html">props</a></li>
+        <li class="inherited"><a href="components/Tab/hashCode.html">hashCode</a></li>
+        <li class="inherited"><a href="components/Tab/runtimeType.html">runtimeType</a></li>
+        <li class="inherited"><a href="components/Tab/stringify.html">stringify</a></li>
+    
+        <li class="section-title"><a href="components/Tab-class.html#instance-methods">Methods</a></li>
+        <li><a href="components/Tab/ngOnDestroy.html">ngOnDestroy</a></li>
+        <li><a href="components/Tab/tabClick.html">tabClick</a></li>
+        <li class="inherited"><a href="components/Tab/noSuchMethod.html">noSuchMethod</a></li>
+        <li class="inherited"><a href="components/Tab/toString.html">toString</a></li>
+    
+        <li class="section-title inherited"><a href="components/Tab-class.html#operators">Operators</a></li>
+        <li class="inherited"><a href="components/Tab/operator_equals.html">operator ==</a></li>
+    
+    
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-property">active</span> property</h1></div>
+
+
+        <section id="getter">
+        
+        <section class="multi-line-signature">
+          <span class="returntype">bool</span>
+                  <span class="name ">active</span>
+          
+</section>
+        
+                <section class="desc markdown">
+          <p>Признак активности вкладки</p>
+        </section>
+                <section class="summary source-code" id="source">
+          <h2><span>Implementation</span></h2>
+          <pre class="language-dart"><code class="language-dart">bool get active =&gt; _active;</code></pre>
+        </section>
+</section>
+        
+        <section id="setter">
+        
+        <section class="multi-line-signature">
+          <span class="returntype">void</span>
+                    <span class="name ">active=</span>
+<span class="signature">(<wbr><span class="parameter" id="active=-param-active"><span class="type-annotation">bool</span> <span class="parameter-name">active</span></span>)</span>
+                  <div class="features">@Input()</div>
+</section>
+        
+                <section class="desc markdown">
+          <p>Устанавливает признак активности вкладки</p>
+<p>Аннотация <code>@Input()</code> указывает на то, что признак активности можно
+устанавливаеть через атрибуты элемента в шаблоне:</p>
+<pre class="language-dart"><code>&lt;tab-panel&gt;
+  &lt;tab&gt;Tab 1&lt;/tab&gt;
+  &lt;tab active&gt;Tab 2&lt;/tab&gt;
+&lt;/tab-panel&gt;
+</code></pre>
+<p>Также этот атрибут можно связывать с какой-нибудь переменной класса
+компонента, в шаблоне которого используются вкладки:</p>
+<pre class="language-dart"><code>&lt;tab-panel&gt;
+  &lt;tab&gt;Tab 1&lt;/tab&gt;
+  &lt;tab [active]="isActive"&gt;Tab 2&lt;/tab&gt;
+&lt;/tab-panel&gt;
+</code></pre>
+<p><code>isActive</code> - переменная компонента, в шаблоне которого используются
+вкладки. Вместо <code>isActive</code> может использоватья и более сложное выражение
+языка Dart, связывающее доступные в шаблоне переменные (см. шаблон
+компонента приложения: application.html). Доступными являются публичные
+переменные класса компонента, для котрого пишется шаблон, а также сущности,
+указанные в атрибуте <code>export</code> аннотации компонента.</p>
+<p>Для одностороннего связывания атрибута с переменной компонента имя атрибута
+заключается в квадратные скобки. Одностороннее связывание означает, что
+значение атрибута <code>active</code> становится равным значению переменной <code>isActive</code>.
+Но не наоборот. Иными словами любое изменение переменной <code>isActive</code> немедленно
+отражается на значении атрибута <code>active</code>, но изменение атрибута не приводит к
+изменению переменной.</p>
+        </section>
+                <section class="summary source-code" id="source">
+          <h2><span>Implementation</span></h2>
+          <pre class="language-dart"><code class="language-dart">@Input()
+set active(bool active) {
+  _active = active; &#47;&#47; устанавливаем признак активности
+  if (active) {
+    _onActivateController.add(this); &#47;&#47; генерируем событие `onActivate`
+  }
+}</code></pre>
+        </section>
+</section>
+          </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    currency_converter_web
+      1.0.0
+  </span>
+
+  <!-- footer-text placeholder -->
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- footer placeholder -->
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!-- Шаблон формы ввода параметров валюты -->
+<form
+    class="currency-editor__item"
+    #form="ngForm"
+>
+    <div class="currency-editor__code">
+        <!--
+            Поле ввода кода валюты
+            
+            Благодаря наличию атрибутов ngControl и type="upper", к эелменту привязан
+            экземпляр `LabeledInputUpperCaseValueAccessor`, что позволяет:
+
+            1. Осуществлить двунаправленную привязку значения элемента формы к
+            значению кода валюты (см. атрибут '[(ngModel)]="currency.code"')
+
+            2. Привязать автоматическую валидацию к полю (атрибуты 'required',
+            'currencyCode'). При этом валидность формы определяется валидностью всех
+            элементов формы.
+
+            3. Автоматически приводить символы кода валюты к верхнему регистру.
+    
+            Режим "только для чтения" устанавливается в двух случаях:
+      
+            1. Установлен режим "только для чтения" для всей формы.
+
+            2. Для формы установлен режим редактирования. В режиме редактирования
+            нельзя изменить код валюты, так как он является ее идентификатором
+        -->
+        <labeled-input
+            #code="ngForm"
+            [(ngModel)]="currency.code"
+            ngControl="code"
+            label="Код валюты"
+            required
+            currencyCode
+            type="upper"
+            [readOnly]="readOnly || mode == Mode.edit"
+            (onFocus)="focused = code.control"
+        ></labeled-input>
+    </div>
+    <div class="currency-editor__label">
+        <!--
+            Поле ввода наименования валюты.
+            Аналогично  предыдущему полю, но применяется `LabeledInputDefaultValueAccessor`
+        -->
+        <labeled-input
+            #name="ngForm"
+            ngControl="name"
+            [(ngModel)]="currency.name"
+            label="Наименование валюты"
+            required
+            [readOnly]="readOnly"
+            (onFocus)="focused = name.control"
+        ></labeled-input>
+    </div>
+    <div class="currency-editor__rate">
+        <!--
+            Поле ввода рэйтинга валюты.
+
+            У этого поля с помощью атрибута 'type="number"' привязываются как
+            `LabeledInputNumberValueAccessor`, так и валидатор `NumberValidator`.
+            Это позволяет проверять валидность поля и сохранять значение поля в
+            атрибуте currency.rate, имеющему тип num.
+        -->
+        <labeled-input
+            #rate="ngForm"
+            type="number"
+            ngControl="rate"
+            [(ngModel)]="currency.rate"
+            label="Рэйтинг"
+            [readOnly]="readOnly"
+            (onFocus)="focused = rate.control"
+        ></labeled-input>
+    </div>
+</form>
+<div class="error_message">{{message}}</div>

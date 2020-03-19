@@ -1,22 +1,5 @@
-A library for Dart developers.
+# Модели данных для приложения "Конвертер валют"
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+Пакет состоит из одной библиотеки `models.dart`, которая в свою очередь содержит два класса `Currency` и `Conversion`.
 
-## Usage
-
-A simple usage example:
-
-```dart
-import 'package:models/models.dart';
-
-main() {
-  var awesome = new Awesome();
-}
-```
-
-## Features and bugs
-
-Please file feature requests and bugs at the [issue tracker][tracker].
-
-[tracker]: http://example.com/issues/replaceme
+Данный пакет используют все пакеты приложения.

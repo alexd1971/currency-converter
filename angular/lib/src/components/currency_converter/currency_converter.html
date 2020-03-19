@@ -10,17 +10,21 @@
         <span class="currency-editor__action-label">Добавить</span>
     </button>
 </div>
-<!-- Конверсия
-
-  Количество конверсий формируется динамически на основании списка conversions -->
+<!--
+    Конверсия
+    Количество конверсий формируется динамически на основании состояния BLoC
+-->
 <div
     class="conversion"
-    *ngFor="let conversion of conversions; let i=index"
+    *ngFor="let conversion of bloc|bloc; let i=index"
 >
-    <currency-input
+    <conversion-input
         [conversion]="conversion"
-        (onChange)="onChange(i)"
-    ></currency-input>
+        (onValueChange)="onValueChange(i, $event)"
+        (onCurrencyChange)="onCurrencyChange(i, $event)"
+        (onFocus)="focusedConversionIndex = i"
+        [autofocus]="focusedConversionIndex == i"
+    ></conversion-input>
     <!-- Кнопка удаления конверсии -->
     <div class="currency-editor__actions">
         <button

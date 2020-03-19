@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:angular/angular.dart';
+import 'package:angular_bloc/angular_bloc.dart';
 import 'package:currency_converter_models/models.dart';
+import 'package:currency_converter_bloc/bloc.dart';
 
 /// Компонент выбора валюты для конверсии
 ///
@@ -25,14 +27,12 @@ import 'package:currency_converter_models/models.dart';
   templateUrl: 'currency_selector.html',
   styleUrls: ['currency_selector.css'],
   directives: [coreDirectives],
+  pipes: [BlocPipe],
 )
 class CurrencySelector implements OnDestroy {
-  /// Список валют для выбора
-  var currencies = <Currency>[
-    Currency(code: 'USD', name: 'Доллар США', rate: 1),
-    Currency(code: 'RUR', name: 'Российский рубль'),
-    Currency(code: 'BYR', name: 'Белорусский рубль')
-  ];
+  final CurrencyManagerBloc bloc;
+
+  CurrencySelector(this.bloc);
 
   /// Выбранная валюта
   ///

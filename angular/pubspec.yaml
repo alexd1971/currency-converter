@@ -7,12 +7,17 @@ environment:
 
 dependencies:
   angular: ^5.3.0
+  angular_bloc: ^3.0.0
   angular_components: ^0.13.0
   angular_forms: ^2.1.2
   angular_router: 2.0.0-alpha+22
   equatable: ^1.0.3
+  currency_converter_bloc:
+    path: ../bloc
   currency_converter_models:
     path: ../models
+  currency_converter_services:
+    path: ../services
 
 dev_dependencies:
   angular_test: ^2.3.0

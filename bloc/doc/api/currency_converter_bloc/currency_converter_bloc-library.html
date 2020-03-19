@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="currency_converter_bloc library API docs, for the Dart programming language.">
+  <title>currency_converter_bloc library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  <!-- header placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">currency_converter_bloc</a></li>
+    <li class="self-crumb">currency_converter_bloc library</li>
+  </ol>
+  <div class="self-name">currency_converter_bloc</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">currency_converter_bloc</a></li>
+      <li class="self-crumb">currency_converter_bloc library</li>
+    </ol>
+    
+    <h5><span class="package-name">currency_converter_bloc</span> <span class="package-kind">package</span></h5>
+    <ol>
+          <li class="section-title">Libraries</li>
+          <li><a href="currency_converter_bloc/currency_converter_bloc-library.html">currency_converter_bloc</a></li>
+    </ol>
+  </div>
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-library">currency_converter_bloc</span> library </h1></div>
+
+    <section class="desc markdown">
+      <p>Библиотека бизнес логики конвертера валют</p>
+<p>Реализует классы событий пользовательского интерфейса:</p>
+<ul>
+<li>Управление валютами:
+<ul>
+<li><a href="currency_converter_bloc/InitCurrencyManagerEvent-class.html">InitCurrencyManagerEvent</a> - инициализация начального состояния</li>
+<li><a href="currency_converter_bloc/AddCurrencyEvent-class.html">AddCurrencyEvent</a> - добавление валюты</li>
+<li><a href="currency_converter_bloc/UpdateCurrencyEvent-class.html">UpdateCurrencyEvent</a> - изменение параметров валюты</li>
+<li><a href="currency_converter_bloc/RemoveCurrencyEvent-class.html">RemoveCurrencyEvent</a> - удаление валюты</li>
+</ul>
+</li>
+<li>Конвертация валют:
+<ul>
+<li><a href="currency_converter_bloc/InitCurrencyConverterEvent-class.html">InitCurrencyConverterEvent</a> - инициализация начального состояния</li>
+<li><a href="currency_converter_bloc/AddConversionEvent-class.html">AddConversionEvent</a> - добавление конверсии</li>
+<li><a href="currency_converter_bloc/ChangeConversionCurrencyEvent-class.html">ChangeConversionCurrencyEvent</a> - изменение валюты конверсии</li>
+<li><a href="currency_converter_bloc/ChangeConversionValueEvent-class.html">ChangeConversionValueEvent</a> - изменение значения суммы конверсии</li>
+<li><a href="currency_converter_bloc/RemoveConversionEvent-class.html">RemoveConversionEvent</a> - удаление конверсии</li>
+</ul>
+</li>
+</ul>
+<p>Реализует компоненты бизнес-логики:</p>
+<ul>
+<li><a href="currency_converter_bloc/CurrencyManagerBloc-class.html">CurrencyManagerBloc</a> - компонент бизнес-логики менеджера валют</li>
+<li><a href="currency_converter_bloc/CurrencyConverterBloc-class.html">CurrencyConverterBloc</a> - компонент бизнес-логики собственно конвертера валют</li>
+</ul>
+    </section>
+    
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+        <dt id="AddConversionEvent">
+          <span class="name "><a href="currency_converter_bloc/AddConversionEvent-class.html">AddConversionEvent</a></span>         
+        </dt>
+        <dd>
+          Событие добавления конверсии
+        </dd>
+        <dt id="AddCurrencyEvent">
+          <span class="name "><a href="currency_converter_bloc/AddCurrencyEvent-class.html">AddCurrencyEvent</a></span>         
+        </dt>
+        <dd>
+          Событие добавления новой валюты
+        </dd>
+        <dt id="ChangeConversionCurrencyEvent">
+          <span class="name "><a href="currency_converter_bloc/ChangeConversionCurrencyEvent-class.html">ChangeConversionCurrencyEvent</a></span>         
+        </dt>
+        <dd>
+          Событие изменения валюты конверсии
+        </dd>
+        <dt id="ChangeConversionValueEvent">
+          <span class="name "><a href="currency_converter_bloc/ChangeConversionValueEvent-class.html">ChangeConversionValueEvent</a></span>         
+        </dt>
+        <dd>
+          Событие изменения значения суммы конверсии
+        </dd>
+        <dt id="CurrencyConverterBloc">
+          <span class="name "><a href="currency_converter_bloc/CurrencyConverterBloc-class.html">CurrencyConverterBloc</a></span>         
+        </dt>
+        <dd>
+          Компонент бизнес-логики конвертера валют <a href="currency_converter_bloc/CurrencyConverterBloc-class.html">[...]</a>
+        </dd>
+        <dt id="CurrencyConverterEvent">
+          <span class="name "><a href="currency_converter_bloc/CurrencyConverterEvent-class.html">CurrencyConverterEvent</a></span>         
+        </dt>
+        <dd>
+          Событие конвертера валют <a href="currency_converter_bloc/CurrencyConverterEvent-class.html">[...]</a>
+        </dd>
+        <dt id="CurrencyManagerBloc">
+          <span class="name "><a href="currency_converter_bloc/CurrencyManagerBloc-class.html">CurrencyManagerBloc</a></span>         
+        </dt>
+        <dd>
+          Компонент бизнес-логики менеджера валют <a href="currency_converter_bloc/CurrencyManagerBloc-class.html">[...]</a>
+        </dd>
+        <dt id="CurrencyManagerEvent">
+          <span class="name "><a href="currency_converter_bloc/CurrencyManagerEvent-class.html">CurrencyManagerEvent</a></span>         
+        </dt>
+        <dd>
+          Событие менеджера валют <a href="currency_converter_bloc/CurrencyManagerEvent-class.html">[...]</a>
+        </dd>
+        <dt id="InitCurrencyConverterEvent">
+          <span class="name "><a href="currency_converter_bloc/InitCurrencyConverterEvent-class.html">InitCurrencyConverterEvent</a></span>         
+        </dt>
+        <dd>
+          Событие инициализации конвертера валют <a href="currency_converter_bloc/InitCurrencyConverterEvent-class.html">[...]</a>
+        </dd>
+        <dt id="InitCurrencyManagerEvent">
+          <span class="name "><a href="currency_converter_bloc/InitCurrencyManagerEvent-class.html">InitCurrencyManagerEvent</a></span>         
+        </dt>
+        <dd>
+          Событие инициализации начального состояния менеджера валют
+        </dd>
+        <dt id="RemoveConversionEvent">
+          <span class="name "><a href="currency_converter_bloc/RemoveConversionEvent-class.html">RemoveConversionEvent</a></span>         
+        </dt>
+        <dd>
+          Событие удаления конверсии
+        </dd>
+        <dt id="RemoveCurrencyEvent">
+          <span class="name "><a href="currency_converter_bloc/RemoveCurrencyEvent-class.html">RemoveCurrencyEvent</a></span>         
+        </dt>
+        <dd>
+          Событие удаления валюты
+        </dd>
+        <dt id="UpdateCurrencyEvent">
+          <span class="name "><a href="currency_converter_bloc/UpdateCurrencyEvent-class.html">UpdateCurrencyEvent</a></span>         
+        </dt>
+        <dd>
+          Событие обновления параметров валюты
+        </dd>
+      </dl>
+    </section>
+
+
+
+
+
+
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>currency_converter_bloc library</h5>
+    <ol>
+      <li class="section-title"><a href="currency_converter_bloc/currency_converter_bloc-library.html#classes">Classes</a></li>
+      <li><a href="currency_converter_bloc/AddConversionEvent-class.html">AddConversionEvent</a></li>
+      <li><a href="currency_converter_bloc/AddCurrencyEvent-class.html">AddCurrencyEvent</a></li>
+      <li><a href="currency_converter_bloc/ChangeConversionCurrencyEvent-class.html">ChangeConversionCurrencyEvent</a></li>
+      <li><a href="currency_converter_bloc/ChangeConversionValueEvent-class.html">ChangeConversionValueEvent</a></li>
+      <li><a href="currency_converter_bloc/CurrencyConverterBloc-class.html">CurrencyConverterBloc</a></li>
+      <li><a href="currency_converter_bloc/CurrencyConverterEvent-class.html">CurrencyConverterEvent</a></li>
+      <li><a href="currency_converter_bloc/CurrencyManagerBloc-class.html">CurrencyManagerBloc</a></li>
+      <li><a href="currency_converter_bloc/CurrencyManagerEvent-class.html">CurrencyManagerEvent</a></li>
+      <li><a href="currency_converter_bloc/InitCurrencyConverterEvent-class.html">InitCurrencyConverterEvent</a></li>
+      <li><a href="currency_converter_bloc/InitCurrencyManagerEvent-class.html">InitCurrencyManagerEvent</a></li>
+      <li><a href="currency_converter_bloc/RemoveConversionEvent-class.html">RemoveConversionEvent</a></li>
+      <li><a href="currency_converter_bloc/RemoveCurrencyEvent-class.html">RemoveCurrencyEvent</a></li>
+      <li><a href="currency_converter_bloc/UpdateCurrencyEvent-class.html">UpdateCurrencyEvent</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    </ol>
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    currency_converter_bloc
+      1.0.0
+  </span>
+
+  <!-- footer-text placeholder -->
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- footer placeholder -->
+
+</body>
+
+</html>

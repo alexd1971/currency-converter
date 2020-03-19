@@ -1,16 +1,23 @@
 import 'dart:html';
 
 import 'package:angular/angular.dart';
+import 'package:angular_bloc/angular_bloc.dart';
 import 'package:currency_converter_models/models.dart';
+import 'package:currency_converter_bloc/bloc.dart';
 
-import '../../../components.dart' show CurrencyInput;
+import '../../../components.dart' show ConversionInput;
 
 /// Компонент конвертации валют
 @Component(
   selector: 'currency-converter',
   templateUrl: 'currency_converter.html',
   styleUrls: ['currency_converter.css'],
-  directives: [coreDirectives, CurrencyInput],
+  directives: [
+    coreDirectives,
+    ConversionInput, // в шаблоне используется этот компонент
+  ],
+  // BlocPipe используется в шаблоне для получения состояния BLoC
+  pipes: [BlocPipe],
 )
 class CurrencyConverter {
   /// Элемент DOM, связанный с компонентом
@@ -18,31 +25,23 @@ class CurrencyConverter {
   /// Элемент используется для анимации при удалении конверсии
   final Element _element;
 
-  /// Создает экземпляр компонента и инжектирует элемент, связанный с
-  /// компонентом
-  CurrencyConverter(this._element);
+  /// BLoC конвертера валют
+  final CurrencyConverterBloc bloc;
 
-  /// Список конверсий, связанных с компонентом
+  /// Создает экземпляр компонента и инжектирует элемент, связанный с
+  /// компонентом, и BLoC
+  CurrencyConverter(this._element, this.bloc);
+
+  /// Индекс конверсии, на которой находится фокус ввода
   ///
-  /// Количество конверсий управляется методами [add] и [delete]. Изменение
-  /// списка конверсий автоматически отражается в браузере благодаря
-  /// использованию директивы [NgFor] в шаблоне
-  List<CurrencyConversion> conversions = [
-    CurrencyConversion(
-        currency: Currency(code: 'USD', name: 'Доллар США', rate: 1),
-        value: 100),
-    CurrencyConversion(
-        currency: Currency(code: 'RUR', name: 'Российский рубль', rate: 60),
-        value: 6000),
-  ];
+  /// Используется для восстановления фокуса ввода после обновления состояния
+  /// конверсий
+  int focusedConversionIndex;
 
   /// Добавляет новую конверсию
   void add() {
-    conversions.insert(
-        0,
-        CurrencyConversion(
-            currency: Currency(code: 'USD', name: 'Доллар США', rate: 1),
-            value: 100));
+    // генерируем событие добавления конверсии
+    bloc.add(AddConversionEvent());
   }
 
   /// Удаляет конверсию
@@ -57,14 +56,18 @@ class CurrencyConverter {
         .onFinish
         .listen((_) {
           // После завершения анимации удаляем конверсию
-          conversions.removeAt(i);
+          bloc.add(RemoveConversionEvent(i));
         });
   }
 
   /// Обработчик изменения состояния конверсии
   ///
   /// Срабатывает при изменении валюты или значения в поле ввода
-  void onChange(int i) {
-    print(conversions[i]);
+  void onValueChange(int i, num value) {
+    bloc.add(ChangeConversionValueEvent(i, value));
+  }
+
+  void onCurrencyChange(int i, Currency currency) {
+    bloc.add(ChangeConversionCurrencyEvent(i, currency));
   }
 }
